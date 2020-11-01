@@ -1,0 +1,96 @@
+Questions:-
+============
+
+1. Which of the following is not a stable sorting algorithm in its typical implementation.
+	
+A. Insertion Sort
+B. Merge Sort
+C. Quick Sort
+D. Bubble Sort
+
+ans C
+
+2. Which of the following sorting algorithms in its typical implementation gives best performance 
+   when applied on an array which is sorted or almost sorted (maximum 1 or two elements are misplaced).
+   
+A. Quick Sort
+B. Heap Sort
+C. Merge Sort
+D. Insertion Sort
+
+ans D
+
+3. Consider a situation where swap operation is very costly. Which of the following sorting algorithms should be 
+   preferred so that the number of swap operations are minimized in general?
+   
+ A. Heap sort
+ B. Selection Sort
+ C. Insertion Sort
+ D. Merge Sort
+ 
+ ans. B
+ 
+ 4. Consider a situation where swap operation is very costly. Which of the following sorting algorithms 
+    should be preferred so that the number of swap operations are minimized in general?
+    
+ A. Heap sort
+ B. Selection Sort
+ C. Insertion Sort
+ D. Merge Sort
+ 
+ ans. C
+ 
+ 5. What is the worst case time complexity of insertion sort where position of the data to be inserted is 
+    calculated using binary search? 
+
+ans n2
+
+6. Which is the correct order of the following algorithms with respect to their time Complexity in the best case ?
+	
+A. Merge sort > Quick sort >Insertion sort > selection sort
+	
+B. insertion sort < Quick sort < Merge sort < selection sort
+
+C. Merge sort > selection sort > quick sort > insertion sort
+
+D. Merge sort > Quick sort > selection sort > insertion sort    
+   
+ans. B
+
+7. Consider the array A[]= {6,4,8,1,3} apply the insertion sort to sort the array . 
+   Consider the cost associated with each sort is 25 rupees , what is the total cost of 
+   the insertion sort when element 1 reaches the first position of the array  ? 
+ 
+ A. 50
+ B. 25
+ C. 75
+ D. 100
+ 
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

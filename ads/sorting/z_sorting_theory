@@ -1,0 +1,245 @@
+sorting Theory
+---------------
+
+																1.Selection Sort
+								---------------------------------------------------------------------------------------
+								
+The algorithm maintains two subarrays in a given array.
+
+1) The subarray which is already sorted.
+2) Remaining subarray which is unsorted.
+
+Initially, the sorted part is empty and the unsorted part is the entire list.In every iteration of selection sort,
+the minimum element (considering ascending order) from the unsorted subarray is picked and moved to the sorted subarray.
+
+Time complexity:-
+
+worst-case : O(n2) comparisons
+			 O(n)  swap
+			 
+Best- case : O(n2) comparisons
+			 O(1)  swaps
+			 
+Average-case:O(n2) comparisons
+			 O(n)  swap
+
+In Place : Yes, it does not require extra space.
+Stable : it is not stable because if same ele are in array then it will change position of them
+
+[5a, 2, 3, 5b, 1 ]
+
+we have two 5 element. after first iteration
+[1,2,3,5b,5a ]
+position is changed. 
+
+																2.Insertion Sort
+								---------------------------------------------------------------------------------------
+							
+The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the 
+correct position in the sorted part.
+
+Algorithm
+To sort an array of size n in ascending order:
+1: Iterate from arr[1] to arr[n] over the array.
+2: Compare the current element (key) to its predecessor. and find correct position
+
+
+worst-case : O(n2) comparisons
+			 O(n2) swap
+			 
+Best- case : O(n) comparisons
+			 O(1) swaps
+			 
+Average-case:O(n2) comparisons
+			 O(n2) swap
+
+
+
+Auxiliary Space: O(1)
+
+Sorting In Place: Yes
+
+Stable: Yes
+
+Uses: Insertion sort is used when number of elements is small. It can also be useful when input array is almost sorted,
+ only few elements are misplaced in complete big array. 
+ 
+ What is Binary Insertion Sort?
+We can use binary search to reduce the number of comparisons in normal insertion sort. 
+Binary Insertion Sort uses binary search to find the proper location to insert the selected item at each iteration. 
+In normal insertion, sorting takes O(i) (at ith iteration) in worst case. We can reduce it to O(logi) by using binary search. 
+The algorithm, as a whole, still has a running worst case running time of O(n2) because of the series of swaps required for each insertion. 
+Refer this for implementation.
+ 
+ 
+ 
+ 													3.Merge sort Algorithm
+				 			-------------------------------------------------------------------------------------
+ 
+ 1. Merge sort is a divide and conquer algorithm.
+ In divide and conquer algorithm we break a problem into sub-problem and then we find out the solution to sub-problem and from solutions 
+ to sub-problem we contruct the solution of the actual problem. 
+ 
+2. Second property of merge sort algorithm is that its a recursive algorithm.Recursion is a function calling itself. recursion is problem 
+ reducing itself in a self similar manner. 
+ 
+3. Merge sort is also a stable algorithm.[it preserve the relative order of record with same key]
+ 
+4. Merge sort is not an In-place algorithm.space complexity of merge complexity is O(n)
+
+
+Stable:- yes!
+algo of merge sort
+-------------------
+
+MergeSort(A, p, r):  ---> T(n)
+{
+	if p > r 
+        return
+    q = (p+r)/2
+    mergeSort(A, p, q)  --> T(n/2)
+    mergeSort(A, q+1, r) ---> T(n/2)
+    merge(A, p, q, r)    ---> n [time comp of merge of two array is n]
+}
+    
+    now 
+   
+   T(n) = 2T(n/2) + c'n            [  T(n/2) = 2 T(n/4) +c'n/2 -->replace n=n/2     ]
+   
+   	    = 2[ 2T(n/4) + c'n/2   ] + c'n
+   	    
+   	    = 4T(n/4) +  2c'n
+   	    
+   	    = 4[ 2T(T\8) + 2c'n/4 ] + 2c'n
+   	    
+   	    = 8T(n/8) + 3c'n
+   	    
+   	    = 2^k(n/2^k) + kc'n  ----(1)
+   	    
+   	    = we want to reduce till 
+   	    = n/2^k = 1
+   	    
+   	     n = 2^k
+   	    
+   	     k = logn
+   	    
+   	     now replace k with logn in eq (1)
+   	    
+   	     2^logn(n/2^logn) + lognc'n
+   	      
+		 now 2^logn = n   because we have log base 2 and 2^log(2)=1 hare 2 is base value
+  
+ 		n + n.logn c'
+ 		
+ 		O(nlogn)
+ 		for more clearity
+ //https://www.youtube.com/watch?v=0nlPxaC2lTw
+ 
+ 
+ Applications of Merge Sort
+
+Merge Sort is useful for sorting linked lists in O(nLogn) time.In the case of linked lists, 
+the case is different mainly due to the difference in memory allocation of arrays and linked lists. 
+ 
+ 
+ 
+ 													4. Bubble Sort
+ 									------------------------------------------------------------------
+
+Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
+
+Time complexity
+
+Worst case O(n2)
+Averate Case O(n2)
+Best case O(n)
+
+Sorting In Place: Yes
+
+Stable: Yes
+ 
+In computer graphics it is popular for its capability to detect a very small error (like swap of just two elements) in almost-sorted arrays 
+and fix it with just linear complexity (2n). For example, it is used in a polygon filling algorithm, where bounding lines are sorted by their x 
+coordinate at a specific scan line (a line parallel to x axis) and with incrementing y their order changes (two elements are swapped) only at 
+intersections of two lines 
+ 
+ 
+ 
+ 													5. Quick sort
+ 									-------------------------------------------------------------------------
+
+ 1. Merge sort is a divide and conquer algorithm.
+ In divide and conquer algorithm we break a problem into sub-problem and then we find out the solution to sub-problem and from solutions 
+ to sub-problem we contruct the solution of the actual problem. 
+ 
+2. Second property of merge sort algorithm is that its a recursive algorithm.Recursion is a function calling itself. recursion is problem 
+ reducing itself in a self similar manner. 
+3. Not stable -->[it preserve the relative order of record with same key]
+4.
+  Time complexity of quick sort 
+  	best and average caes:- O(nlogn)
+  
+  	worst case:- O(n2)
+  	
+  	worst case can be avoided by using ramdomized version of quick sort.
+  	
+ //https://www.youtube.com/watch?v=3Bbm3Prd5Fo&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=8
+ 
+ 
+ 													5a. Randomized Quick Sort
+ 									--------------------------------------------------------------------------------
+ 									
+ Randomized Quick Sort is used for reduce worst case time complexity of quick sort
+ in quick sort worst case time complexity is O(n2) while we can use Randomized Quick Sort to improve it in O(nlogn)
+ 
+ in quick sort we select last index element as pivot element. so as result there can be all the ele are either left side of pivot
+ or all are at right side of pivot element.
+ 
+ Quick sort (A, start, end) --> T(n)
+ {
+ 	if(start<end)
+ 	{
+ 		pIndex <-- partition(A,start,end)   --> 1
+ 		Quick sort (A, start, pIndex-1)     --> T(i-1)
+ 		Quick sort (A, pIndex+1, end)		--> T(n-i)	
+ 	}	
+ }
+ 
+ O(n2)
+ 
+ in Randomized Quick Sort we select pivot index ramdomly instead of last index.
+ then swap pivot index and last index element.
+ 
+ Randomized Quick sort (A, start, end) --> T(n)
+ {
+ 	if(start<end)
+ 	{
+ 		pIndex---> ramdom(start,end); //library function
+ 		swap(a[pIndex],a[end]);
+ 		pIndex <-- Randomizedpartition(A,start,end)   --> 1
+ 		Quick sort (A, start, pIndex-1)     
+ 		Quick sort (A, pIndex+1, end)		
+ 	}	
+ }
+ 
+ 
+ now time complexity O(nlogn)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

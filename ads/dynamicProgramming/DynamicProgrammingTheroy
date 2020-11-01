@@ -1,0 +1,18 @@
+Dynamic Programming
+--------------------
+dynamic programmig is a optimization version of simple recursion.
+complexity of simple recursion is exponential.Now our task is to solve it in logarithm or linear complexity like logn , nlogn, n;
+
+we can performe dynamic programming in two ways.
+1. Bottom - up approach  C->c++->DSA->ADS->Hackerrak->Events->good placement
+2. Top - Down approach   Good placement -> events-> hacker rank-> ADS -> DSA -> c++ -> c
+
+Where can we use dynamic programming
+------------------------------------
+
+1. if we can broken down a large problem in similar(optimal1) sub problem then we can apply DP.
+2. Recursively define the value of the solution by expressing in terms of optimal solution for smaller sub problem.
+3. Compute the value of the optimal solution in bottum up fashion.
+ 
+For example 
+UglyNumber program is time consuming .
